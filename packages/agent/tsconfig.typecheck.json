@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "../..",
+    "paths": {
+      "@line-rag/shared": ["../shared/src/index.ts"],
+      "@line-rag/llm-gateway": ["../llm-gateway/src/index.ts"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "../shared/src/**/*.ts",
+    "../llm-gateway/src/**/*.ts"
+  ]
+}

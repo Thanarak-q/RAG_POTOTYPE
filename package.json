@@ -1,0 +1,36 @@
+{
+  "name": "line-rag-prototype",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "workspaces": [
+    "packages/shared",
+    "packages/llm-gateway",
+    "packages/agent",
+    "packages/ui",
+    "apps/svc-bot",
+    "apps/web-shop",
+    "apps/web-platform",
+    "apps/web-admin"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:admin": "npm run dev --workspace @line-rag/web-admin",
+    "dev:bot": "npm run dev --workspace @line-rag/svc-bot",
+    "dev:shop": "npm run dev --workspace @line-rag/web-shop",
+    "dev:platform": "npm run dev --workspace @line-rag/web-platform",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:coverage": "npm run test:coverage --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitest/coverage-v8": "^2.1.8",
+    "drizzle-kit": "^0.30.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
